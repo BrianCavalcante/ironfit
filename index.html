@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conheça a IronFit Academia. Treinos, profissionais qualificados e estrutura completa para alcançar seus objetivos.">
+
+    <meta name="theme-color" content="#101310">
+
+    <title>IronFit | Academia</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo" aria-label="IronFit - Página inicial">
+                IRON<span>FIT.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="mainNavigation" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#estrutura">Treinos</a>
+                <a href="#estrutura" data-tab-link="trainers">Treinadores</a>
+                <a href="#estrutura" data-tab-link="hours">Horários</a>
+                <a href="#localizacao">Localização</a>
+                <a href="#localizacao" class="nav-cta">Entre em contato</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <span class="section-tag">SUPERE SEUS LIMITES</span>
+
+                <h1>
+                    SEU PRÓXIMO<br>
+                    NÍVEL COMEÇA<br>
+                    <span>AQUI.</span>
+                </h1>
+
+                <p>
+                    Mais do que uma academia, um ambiente para desenvolver
+                    sua força, disciplina e evolução todos os dias.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#estrutura" class="button button-primary">
+                        Conheça nossos treinos
+                    </a>
+
+                    <a href="#localizacao" class="button button-outline">
+                        Onde estamos
+                    </a>
+                </div>
+
+                <div class="hero-info">
+                    <div>
+                        <strong>100%</strong>
+                        <span>Foco na evolução</span>
+                    </div>
+
+                    <div>
+                        <strong>PRO</strong>
+                        <span>Profissionais qualificados</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Compromisso com você</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="features section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">POR QUE ESCOLHER A IRONFIT?</span>
+                    <h2>SEU OBJETIVO É A NOSSA <span>MISSÃO.</span></h2>
+                </div>
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">01</span>
+                        <h3>Estrutura completa</h3>
+                        <p>Equipamentos e ambientes preparados para diferentes modalidades de treino.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">02</span>
+                        <h3>Profissionais</h3>
+                        <p>Treinadores preparados para orientar e acompanhar sua evolução.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">03</span>
+                        <h3>Seu ritmo</h3>
+                        <p>Treinos adaptados aos seus objetivos e ao seu nível de experiência.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ÁREA DE ABAS -->
+        <section class="programs section-padding" id="estrutura">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">EXPLORE A IRONFIT</span>
+                    <h2>CONHEÇA NOSSA <span>ESTRUTURA.</span></h2>
+                    <p>Encontre informações sobre nossos serviços e profissionais.</p>
+                </div>
+
+                <!-- Navegação acessível entre abas -->
+                <div
+                    class="tabs"
+                    role="tablist"
+                    aria-label="Informações da academia"
+                >
+
+                    <button
+                        class="tab-button active"
+                        id="tab-workouts"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="panel-workouts"
+                        tabindex="0"
+                        data-tab="workouts"
+                    >
+                        Treinos
+                    </button>
+
+                    <button
+                        class="tab-button"
+                        id="tab-trainers"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-trainers"
+                        tabindex="-1"
+                        data-tab="trainers"
+                    >
+                        Treinadores
+                    </button>
+
+                    <button
+                        class="tab-button"
+                        id="tab-hours"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-hours"
+                        tabindex="-1"
+                        data-tab="hours"
+                    >
+                        Funcionamento
+                    </button>
+
+                </div>
+
+                <!-- PAINEL: TREINOS -->
+                <div
+                    class="tab-panel"
+                    id="panel-workouts"
+                    role="tabpanel"
+                    aria-labelledby="tab-workouts"
+                    tabindex="0"
+                >
+                    <div class="content-grid" id="workoutsContainer">
+                        <article class="info-card">
+                            <span class="card-number">01</span>
+                            <h3>Musculação</h3>
+                            <p>Treinamento de força com exercícios e equipamentos variados.</p>
+                            <span class="card-label">Força e condicionamento</span>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="card-number">02</span>
+                            <h3>Hipertrofia</h3>
+                            <p>Treinamento voltado ao desenvolvimento muscular e progressão de cargas.</p>
+                            <span class="card-label">Desenvolvimento muscular</span>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="card-number">03</span>
+                            <h3>Funcional</h3>
+                            <p>Exercícios que trabalham mobilidade, equilíbrio e condicionamento físico.</p>
+                            <span class="card-label">Condicionamento</span>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- PAINEL: TREINADORES -->
+                <div
+                    class="tab-panel"
+                    id="panel-trainers"
+                    role="tabpanel"
+                    aria-labelledby="tab-trainers"
+                    tabindex="0"
+                    hidden
+                >
+                    <div class="content-grid" id="trainersContainer">
+                        <article class="info-card">
+                            <span class="card-number">01</span>
+                            <h3>Lucas Martins</h3>
+                            <p>Especialista em musculação e treinamento de força.</p>
+                            <span class="card-label">Educação Física</span>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="card-number">02</span>
+                            <h3>Mariana Costa</h3>
+                            <p>Experiência em treinamento funcional e condicionamento.</p>
+                            <span class="card-label">Treinamento funcional</span>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="card-number">03</span>
+                            <h3>Rafael Oliveira</h3>
+                            <p>Atuação em hipertrofia e preparação física.</p>
+                            <span class="card-label">Hipertrofia</span>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- PAINEL: HORÁRIOS -->
+                <div
+                    class="tab-panel"
+                    id="panel-hours"
+                    role="tabpanel"
+                    aria-labelledby="tab-hours"
+                    tabindex="0"
+                    hidden
+                >
+                    <div class="hours-card" id="hoursContainer">
+                        <div class="hours-item">
+                            <span>Segunda a sexta</span>
+                            <strong>05:00 às 23:00</strong>
+                        </div>
+
+                        <div class="hours-item">
+                            <span>Sábado</span>
+                            <strong>06:00 às 18:00</strong>
+                        </div>
+
+                        <div class="hours-item">
+                            <span>Domingo</span>
+                            <strong>08:00 às 12:00</strong>
+                        </div>
+
+                        <div class="hours-item">
+                            <span>Feriados</span>
+                            <strong>Consulte a disponibilidade</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="data-status" id="dataStatus" role="status" aria-live="polite">
+                    Exibindo informações de exemplo.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <section class="location section-padding" id="localizacao">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">VENHA NOS VISITAR</span>
+                    <h2>ESTAMOS ESPERANDO <span>POR VOCÊ.</span></h2>
+                    <p>Encontre nossa unidade e entre em contato.</p>
+                </div>
+
+                <div class="location-grid" id="locationContainer">
+
+                    <article class="location-card">
+                        <span class="location-icon" aria-hidden="true">⌖</span>
+                        <h3>Nosso endereço</h3>
+                        <p>Av. Exemplo, 1000</p>
+                        <p>Centro - Fortaleza, CE</p>
+                    </article>
+
+                    <article class="location-card">
+                        <span class="location-icon" aria-hidden="true">☎</span>
+                        <h3>Telefone</h3>
+                        <p>(85) 99999-0000</p>
+                        <a href="tel:+5585999990000">Ligar para academia</a>
+                    </article>
+
+                    <article class="location-card">
+                        <span class="location-icon" aria-hidden="true">✉</span>
+                        <h3>E-mail</h3>
+                        <p>contato@ironfit.com.br</p>
+                        <a href="mailto:contato@ironfit.com.br">Enviar e-mail</a>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CHAMADA FINAL -->
+        <section class="final-cta">
+            <div class="container final-cta-content">
+                <span class="section-tag">CHEGOU A SUA VEZ</span>
+                <h2>COMECE SUA <span>EVOLUÇÃO.</span></h2>
+                <p>Conheça nossa estrutura e descubra como podemos ajudar.</p>
+                <a href="#localizacao" class="button button-primary">
+                    Entre em contato
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="#inicio" class="logo">
+                IRON<span>FIT.</span>
+            </a>
+
+            <p>© <span id="currentYear"></span> IronFit Academia. Todos os direitos reservados.</p>
+
+            <a href="#inicio" class="back-to-top">Voltar ao topo ↑</a>
+
+        </div>
+    </footer>
+
+</body>
+</html>
